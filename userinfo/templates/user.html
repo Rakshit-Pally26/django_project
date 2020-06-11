@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Title</title>
+        <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;  
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+        </style>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='header'>
+                <p class='title'> User #{{ first_name }} </p>
+            </div>
+        <div>
+        <div class='details'>
+            <p></p>
+            <p>First Name : {{ first_name }}</p>
+            <p>Last Name : {{ last_name }}</p>
+            <p>Email ID : {{ email }}</p>
+            <p>Phone Number : {{ phone_number }}</p>
+            <p>Data Type : {{ datatype }}</p>
+            <p>Location : {{ location_name }}</p>
+            <p>Latitude : {{ latitude }}</p>
+            <p>Longitude : {{ longitude }}</p>
+            <p>Damage Reported : {{ damage_reported }}</p>
+            <p>Description : {{ .description }}</p>
+            <p>Drought Condition : {{ .drought_condition }}</p>
+            <p>Flood Condition : {{ .flood_condition }}</p>
+            <p>Count/Basin of withdrawal : {{ .county_basin_withdrawal }}</p>
+            <p>Surface water withdrawal volume : {{ .surface_water_withdrawal_volume }}</p>
+            <p>Ground water withdrawal volume : {{ .ground_water_withdrawal_volume }}</p>
+            <p>Ground water level : {{ .ground_water_level }}</p>
+            <p>Reported use by sector : {{ .reported_use_by_sector }}</p>
+            <p>Number of intakes : {{ .number_of_intakes }}</p>
+            <p>Surface water withdrawal : {{ .surface_water_withdrawal }}</p>
+            <p>Ground water withdrawal : {{ .ground_water_withdrawal }}</p>
+            <p>Type of crop : {{ .type_of_crop }}</p>
+            <p>Total acers irrigated : {{ .total_acers_irrigated }}</p>
+            <p>Total acers per crop irrigated : {{ .total_acers_per_crop_irrigated }}</p>
+            <p>Irrigation type : {{ .irrigation_type }}</p>
+            <p>Power requirements and operating pressure range : {{ .power_requirements }}</p>
+            <p>Irrigation schedule information : {{ .irrigation_schedule_info }}</p>
+
+            <hr class='hrItem' />
+        </div>
+    </div>
+    </body>
+</html>

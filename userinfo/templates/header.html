@@ -1,0 +1,65 @@
+{% load static %}
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home - Environmental Data Analytics System (EDAS)</title>
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="all">
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href="/userinfo/">
+                                <img src="{% static 'images/1.png' %}" alt="Environmental Data Analytics System (EDAS)">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/userinfo/" title="Environmental Data Analytics System (EDAS)" rel="home">Agricultural and Environmental Data Analytics System (AEDAS)</a>
+                            </h1>
+                            <p>AEDAS is a National Scale Analytics Pipeline for Data Gathering and computing</p>
+                            <ul class="primary-menu-menu">
+                                <li class="menu-item-has-children">
+                                    <a href="/all_users">
+                                        All Users
+                                    </a>
+                                    /
+                                    <a href="/add_user">
+                                        Contact US
+                                    </a>
+                                    /
+                                    <a href="/documents_upload">
+                                        Upload
+                                    </a>
+                                    /
+                                    <a href="/map_view">
+                                        Map View
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <hr>
+                        <div>
+                        {% block content %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="colophon">
+                <div class="inner-wrap">
+                    AEDAS - Clemson University
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

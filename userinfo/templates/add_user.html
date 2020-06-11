@@ -1,0 +1,169 @@
+{% extends "header.html" %}
+
+<style>
+    input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+
+{% block content %}
+<div class="container">
+    <div class="contact-form medium padding120">
+        <form class="contact-form" method="post" action="/add_user_form_submission/">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="first_name" class="s" placeholder=" First Name" type="text">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="last_name" class="s" placeholder=" Last Name" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="email" class="s" placeholder=" Email Id" type="email">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="phone_number" class="s" placeholder=" Phone Number" type="number">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="datatype" class="s" placeholder=" Data Type" type="text">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="location_name" class="s" placeholder=" Location" type="text"> 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="latitude" class="s" placeholder=" Latitude" type="text">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="longitude" class="s" placeholder=" Longitude" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <textarea name="damage_reported" class="s" placeholder=" Damage Reported"></textarea>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <textarea name="description" class="s" placeholder=" Description"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <textarea name="drought_condition" class="s" placeholder=" Drought Condition"></textarea>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <textarea name="flood_condition" class="s" placeholder=" Flood condition"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="county_basin_withdrawal" class="s" placeholder="County/Basin of withdrawal" type="text">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="surface_water_withdrawal_volume" class="s" placeholder="Surface water withdrawal volume(>3MGM)" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="ground_water_withdrawal_volume" class="s" placeholder="Ground water withdrawal volume(>3MGM)" type="number">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="ground_water_level" class="s" placeholder="Ground water level(in ft)"type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="reported_use_by_sector" class="s" placeholder="Reported use by sector(in Million Gallons)" type="number">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="number_of_intakes" class="s" placeholder="Number of intakes" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="surface_water_withdrawal" class="s" placeholder="Surface water withdrawal(MGM)" type="number">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="ground_water_withdrawal" class="s" placeholder="Ground water withdrawal(MGM)" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="type_of_crop" class="s" placeholder="Type of crop" type="text">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="total_acers_irrigated" class="s" placeholder="Total acers irrigated" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="irrigation_type" class="s" placeholder="Irrigation type" type="text">
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <input name="total_acers_per_crop_irrigated" class="s" placeholder="Total acers per crop irrigated" type="number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <textarea name="power_requirements" class="s" placeholder="Power requirements and operating pressure range"></textarea>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <textarea name="irrigation_schedule_info" class="s" placeholder="Irrigation schedule info"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="submit-block table">
+                    <div class="col-lg-3 table-cell">
+                        <button class="btn btn-small btn-primary">
+                            <span class="text">Add User</span>
+                        </button>
+                    </div>
+                    <div class="col-lg-5 table-cell">
+
+                    </div>
+                </div>
+            </div>  
+        </form>
+    </div>
+</div>
+{% endblock %}
